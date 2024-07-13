@@ -1,41 +1,15 @@
-.page {
-  font-family: inter, Arial, Helvetica;
-  background-color: black;
-  color: white;
-}
-
-.page__section {
-  max-width: 880px;
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-}
-
-.page__content {
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 .header {
   margin-top: 45px;
   border-bottom: 1px #545454;
 }
 
 @media screen and (max-width: 800px) {
-  .page__section {
-    max-width: 725px;
-  }
-
   .header {
     overflow: hidden;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .page__section {
-    max-width: 282px;
-  }
-
   .header {
     overflow: hidden;
   }
