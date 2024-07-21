@@ -22,3 +22,6 @@ Good luck and have fun!
 
 github
 https://github.com/RHH-bit/se_project_aroundtheus
+
+google drive video
+https://drive.google.com/file/d/1qf0ExmZY8KbaOBIDqW9TFd7cBR9GTORf/view?usp=drive_link
