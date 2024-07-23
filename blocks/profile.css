@@ -73,7 +73,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 480px) {
   .profile {
     flex-direction: column;
     margin-left: auto;
@@ -91,18 +91,27 @@
   .profile__title {
     font-size: 22px;
     line-height: 26.63px;
-    justify-content: end;
-    margin-left: 43px;
+    justify-content: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 250px;
   }
 
   .profile__subtitle {
     font-size: 14px;
     line-height: 16.94px;
     margin-top: 14px;
+    justify-content: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 250px;
   }
 
   .profile__add-button {
     width: 282px;
+    margin: 0;
   }
 
   .profile__edit-button {

@@ -62,3 +62,9 @@
 .cards__display {
   display: grid;
 }
+
+@media screen and (max-width: 480px) {
+  .cards {
+    margin-top: 36px;
+  }
+}
