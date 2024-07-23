@@ -56,15 +56,9 @@
 }
 
 .cards__like-button:hover {
-  background: transparent url(../images/light-heart.svg) center no-repeat;
+  opacity: 50%;
 }
 
 .cards__display {
   display: grid;
-}
-
-@media screen and (max-width: 480px) {
-  .card {
-    margin-top: 36px;
-  }
 }
