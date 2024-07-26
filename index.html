@@ -27,11 +27,9 @@
             class="profile__avatar"
           />
           <div class="profile__info">
-            <h1 class="profile__title">
-              Jacques Cousteau ddddddddddddddddddddd
-            </h1>
+            <h1 class="profile__title">Jacques Cousteau</h1>
             <button class="profile__edit-button" type="button"></button>
-            <p class="profile__subtitle">explorer ddddddddddddddddddddd</p>
+            <p class="profile__subtitle">explorer</p>
           </div>
           <button class="profile__add-button" type="button"></button>
         </section>
@@ -109,6 +107,27 @@
       <footer class="footer">
         <p class="footer__copyright">&copy;2024 Around The U.S.</p>
       </footer>
+    </div>
+
+    <div class="modal">
+      <div class="modal__container">
+        <button class="modal__close"></button>
+        <p class="modal__header">Edit profile</p>
+        <form class="modal__form"></form>
+        <input
+          type="text"
+          class="modal__input"
+          name="title"
+          placeholder="Name"
+        />
+        <input
+          type="text"
+          class="modal__input"
+          name="subtitle"
+          placeholder="Job"
+        />
+        <button class="modal__button">Save</button>
+      </div>
     </div>
 
     <script src="./scripts/index.js"></script>
