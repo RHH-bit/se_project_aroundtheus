@@ -57,6 +57,10 @@ const cardUrlInput = addCardForm.querySelector(".modal__input_type_url");
 
 const cardListEl = document.querySelector(".cards__list");
 
+const previewImage = previewImageModal.querySelector(".modal__image");
+const previewImageCaption = previewImageModal.querySelector(".modal__caption");
+const closeButtons = document.querySelectorAll(".modal__close");
+
 // functions //
 
 function closeModal(modal) {
@@ -70,10 +74,6 @@ function openModal(modal) {
 }
 
 function handleImageClick(name, link) {
-  const previewImage = previewImageModal.querySelector(".modal__image");
-  const previewImageCaption =
-    previewImageModal.querySelector(".modal__caption");
-
   previewImage.src = link;
   previewImage.alt = name;
   previewImageCaption.textContent = name;
@@ -131,11 +131,12 @@ editButton.addEventListener("click", () => {
 
 addNewCardButton.addEventListener("click", () => openModal(addCardModal));
 
-profileModalClose.addEventListener("click", () => closeModal(editProfileModal));
-addCardModalClose.addEventListener("click", () => closeModal(addCardModal));
-previewImageClose.addEventListener("click", () =>
-  closeModal(previewImageModal)
-);
+closeButtons.forEach((button) => {
+  const popup = button.closest(".modal");
+  button.addEventListener("click", () => closeModal(popup))
+});
+
+console.log(closeButtons);
 
 editProfileModal.addEventListener("click", handleCloseOverlay);
 addCardModal.addEventListener("click", handleCloseOverlay);
