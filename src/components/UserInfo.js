@@ -1,18 +1,33 @@
 export default class UserInfo {
-    constructor(nameSelector, professionSelector) {
-        this._name = document.querySelector(nameSelector);
-        this._profession = document.querySelector(professionSelector);
-    }
+  constructor(infoSelector, setUserInfo, popupInstances, generateCard) {
+    this._infoSelector = infoSelector;
+    this._setUserInfo = setUserInfo;
+    this._popupInstances = popupInstances;
+    this._generateCard = generateCard;
+  }
 
-    getUserInfo() {
-        return {
-            name: this._name.textContent,
-            profession: this._profession.textContent,
-        }
-    }
+  getUserInfo() {
+    // returns object containing info about user
+    // Set the input fields' values to the current profile information
+    this._infoSelector.profileTitleInput.value =
+      this._infoSelector.profileTitle.textContent;
+    this._infoSelector.profileDescriptionInput.value =
+      this._infoSelector.profileDescription.textContent;
 
-    setUserInfo() {
-        this._name.textContent = name;
-        this._profession.textContent = profession;
-    }
+    return {
+      title: this._infoSelector.profileTitle.textContent,
+      description: this._infoSelector.profileDescription.textContent,
+    };
+  }
+
+  setUserInfo(e, popupInstance) {
+    e.preventDefault();
+    // take new user data add it to page
+    this._infoSelector.profileTitle.textContent =
+      this._infoSelector.profileTitleInput.value;
+    this._infoSelector.profileDescription.textContent =
+      this._infoSelector.profileDescriptionInput.value;
+
+    popupInstance.close();
+  }
 }

@@ -1,21 +1,30 @@
 .header {
   margin-top: 45px;
+  display: flex;
+  align-items: start;
+  width: 880px;
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
-.header__logo {
-  padding-bottom: 40px;
+.header__image {
+  justify-content: start;
+  margin-bottom: 29px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 481px) and (max-width: 880px) {
   .header {
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .header {
+    max-width: 100%;
     margin-top: 28px;
   }
 
-  .header__logo {
-    padding-left: 27px;
-    padding-bottom: 32px;
+  .header__image {
+    margin-left: 27px;
     width: 126px;
-    height: 24px;
   }
 }

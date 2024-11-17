@@ -6,24 +6,49 @@ export default class Card {
     this._handleImageClick = handleImageClick;
   }
 
+  getView() {
+    // Get the template element based on the selector
+    const templateElement = document.querySelector(this._cardSelector);
+
+    // Clone the content of the template
+    this._cardElement = templateElement.content
+      .querySelector(".card")
+      .cloneNode(true);
+
+    // Populate the card data
+    this._cardImageElement = this._cardElement.querySelector(".card__image");
+    this._cardTitleEl = this._cardElement.querySelector(".card__title");
+    this._cardImageElement.src = this._link;
+    this._cardImageElement.alt = this._name;
+    this._cardTitleEl.textContent = this._name;
+
+    // Set event listeners
+    this._setEventListeners();
+
+    // Return the card element
+    return this._cardElement;
+  }
+
   _setEventListeners() {
+    // .card__like-button
     this._cardElement
       .querySelector(".card__like-button")
       .addEventListener("click", () => {
         this._handleLikeIcon();
       });
 
+    // .card__delete-button
     this._cardElement
       .querySelector(".card__delete-button")
       .addEventListener("click", () => {
         this._handleDeleteCard();
       });
 
-    this._cardElement
-      .querySelector(".card__image")
-      .addEventListener("click", () => {
-        this._handleImageClick(this._name, this._link);
-      });
+    // handle image click
+
+    this._cardImageElement.addEventListener("click", () => {
+      this._handleImageClick({ name: this._name, link: this._link });
+    });
   }
 
   _handleLikeIcon() {
@@ -35,20 +60,5 @@ export default class Card {
   _handleDeleteCard() {
     this._cardElement.remove();
     this._cardElement = null;
-  }
-
-  getView() {
-    this._cardElement = document
-      .querySelector(this._cardSelector)
-      .content.querySelector(".card")
-      .cloneNode(true);
-
-    this._cardElement.querySelector(".card__title").textContent = this._name;
-    this._cardElement.querySelector(".card__image").src = this._link;
-    this._cardElement.querySelector(".card__image").alt = this._name;
-
-    this._setEventListeners();
-
-    return this._cardElement;
   }
 }

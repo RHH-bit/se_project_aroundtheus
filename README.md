@@ -1,16 +1,22 @@
 # Project 3: Around The U.S.
 
-This is the third project of the Software Engineering program at TripleTen. It was created using HTML, CSS, and JavaScript based on the design brief.
+The Around The U.S. webpage is the third project in the Software Engineering
+program at TripleTen. It was created using HTML and CSS, based on a figma design brief.
 
 ## Project features
 
-- semantic HTML5
+- Semantic HTML5
 - Flexbox
 - Positioning
-- Flat BEM file structure
-- Profile editer modal
-- JavaScript photo array
+- fonts
+  -@media tags
+  -responsive design
+  -text overflow
 
-## Plan on improving the project
+  ## Deployed URL
 
-the next major update i think would be maybe adding a database.
+  https://taxidriver802.github.io/se_project_aroundtheus/
+
+  ## Project video
+
+https://drive.google.com/file/d/1RStlfLZkQntKlQUO1t1bn2X5NH9vD11o/view?usp=sharing
