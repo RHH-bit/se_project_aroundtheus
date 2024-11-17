@@ -7,8 +7,6 @@ export default class UserInfo {
   }
 
   getUserInfo() {
-    // returns object containing info about user
-    // Set the input fields' values to the current profile information
     this._infoSelector.profileTitleInput.value =
       this._infoSelector.profileTitle.textContent;
     this._infoSelector.profileDescriptionInput.value =
@@ -22,7 +20,6 @@ export default class UserInfo {
 
   setUserInfo(e, popupInstance) {
     e.preventDefault();
-    // take new user data add it to page
     this._infoSelector.profileTitle.textContent =
       this._infoSelector.profileTitleInput.value;
     this._infoSelector.profileDescription.textContent =

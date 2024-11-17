@@ -25,7 +25,7 @@ const initialCards = [
   },
 ];
 
-// Selectors \\
+// Selectors
 
 const config = {
   formSelector: ".modal__form",
@@ -41,7 +41,7 @@ const selectors = {
   cardTemplate: ".card-template",
 };
 
-// DomElements \\
+// DomElements
 
 const profileAddEditButton = document.querySelector("#profile-edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
@@ -93,7 +93,7 @@ const infoSelector = {
 
 window.domElements = domElements;
 
-// Exports \\
+// Exports
 
 export default {
   initialCards,

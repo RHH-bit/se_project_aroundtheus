@@ -52,7 +52,7 @@ const editProfilePopup = new PopupWithForm(
   generateCard,
   null,
   null,
-  null // Temporary placeholder for userInfo
+  null
 );
 
 const userInfo = new UserInfo(infoSelector, () => {}, null, generateCard);

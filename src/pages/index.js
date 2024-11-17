@@ -25,9 +25,7 @@ const handleImageClick = ({ name, link }) => {
 
 cardSection.renderItems();
 
-/*---------------------------------------------------------------------*/
-/*                           Event Handlers                            */
-/*---------------------------------------------------------------------*/
+//Event Handlers
 export function handleProfileEditSubmit(e) {
   userInfo.setUserInfo(e, this);
 }
@@ -37,11 +35,7 @@ export function generateCard(cardsData) {
   return card.getView();
 }
 
-/*---------------------------------------------------------------------*/
-/*                          Event Listeners                            */
-/*---------------------------------------------------------------------*/
-
-/* add profile edit button */
+//Event Listeners
 
 domElements.profileAddEditButton.addEventListener("click", () => {
   editProfilePopup.handleProfileEditButtonClick();
@@ -50,12 +44,8 @@ domElements.profileAddEditButton.addEventListener("click", () => {
   }, 10);
 });
 
-/* add new card button */
-
 domElements.addNewCardButton.addEventListener("click", () => {
   setTimeout(() => {
     newCardPopup.open(domElements.addCardForm);
   }, 10);
 });
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

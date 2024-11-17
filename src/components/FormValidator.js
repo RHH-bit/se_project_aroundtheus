@@ -84,11 +84,10 @@ export default class FormValidator {
 
   resetValidation() {
     this._inputEls.forEach((inputElement) => {
-      this._hideInputError(inputElement); // Clear all error messages
-      inputElement.value = ""; // Clear input fields
+      this._hideInputError(inputElement);
+      inputElement.value = "";
     });
 
-    // Reset button state
     this.disableButton();
   }
 }
